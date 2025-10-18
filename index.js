@@ -30,9 +30,9 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.get("/me", async (req, res) => {
-    const PROFILE_EMAIL =  process.env.PROFILE_EMAIL || 'youremail@gmail.com';
-    const PROFILE_NAME = process.env.PROFILE_NAME || 'name';
-    const PROFILE_STACK = process.env.PROFILE_STACK || 'tech stack';
+    const PROFILE_EMAIL =  process.env.PROFILE_EMAIL || 'dolami.ayinuola@gmail.com';
+    const PROFILE_NAME = process.env.PROFILE_NAME || 'Dolami Ayinuola';
+    const PROFILE_STACK = process.env.PROFILE_STACK || 'Node.js/Express';
 
     const result = {
         status: 'success',
