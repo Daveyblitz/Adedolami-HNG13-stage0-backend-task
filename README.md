@@ -55,7 +55,6 @@ PORT=3000
 PROFILE_EMAIL=you@example.com
 PROFILE_NAME=Your Name
 PROFILE_STACK=Node.js/Express
-CORS_ORIGIN=   # comma-separated allowed origins; empty allows all origins (dev)
 RATE_LIMIT_WINDOW_MS=900000
 RATE_LIMIT_MAX=100
 MORGAN_FORMAT=dev
@@ -67,7 +66,7 @@ Notes:
 
 ---
 
-## Run locally
+## Run locally / test
 Start the server with Node:
 
 ```bash
@@ -103,15 +102,7 @@ curl -s http://localhost:3000/me | jq
 
 Example expected JSON keys: `status`, `user` (with `email`, `name`, `stack`), `timestamp`, `fact`.
 
-If the Cat Facts API is slow or unavailable, the server will return a fallback `fact` string instead of failing.
-
----
-
-## Next steps / improvements (optional)
-- Use a Redis store for rate-limiting in production.
-- Add tests for the `/me` response shape and behaviours.
-- Add logging to a file or logging service, and structured JSON logs.
-- Add a small health-check endpoint (`/health`) for uptime monitoring.
+If the Cat Facts API is slow or unavailable, the server will return a fallback meassage string instead of failing.
 
 ---
 
@@ -120,9 +111,3 @@ This project is provided as-is for the Stage 0 task.
 
 ---
 
-If you want, I can also:
-- Add a `.env.example` file with the variables shown above
-- Add `start`/`dev` scripts to `package.json`
-- Create a small test script that calls `/me` and validates the JSON shape
-
-Tell me which of those you want next.
